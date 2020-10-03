@@ -1,4 +1,4 @@
-﻿#include <stdio.h>
+#include <stdio.h>
 int zod;
 int days(int year, int month, int d)
 {
@@ -260,5 +260,15 @@ int main()
 		printf("ERROR");
 		break;
 	}
-	printf("Programm was created by Vladimir Chigin") // https://vk.com/just_like248
+	
+	if (((birth_y % 4 == 0) && (birth_y % 100 != 0)) || (birth_y % 400 == 0))
+	{
+		printf("Leap year");
+	}
+	else
+	{
+		printf("Not leap year");
+	}
+	printf("Programm was created by Vladimir Chigin"); // https://vk.com/just_like248
+	printf("priver mir");
 }
