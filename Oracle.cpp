@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include <locale.h>
+
 int zod;
 int days(int year, int month, int d)
 {
@@ -112,8 +114,10 @@ int days(int year, int month, int d)
 
 int main()
 {
+	setlocale(LC_ALL, "Russian");
 	int mon;
 	int today_d, today_m, today_y, birth_d, birth_m, birth_y;
+	printf("Привет мир!");
 	printf("Please enter\nwhat date today: dd.mm.yyyy\ndate of your birth: dd.mm.yyyy\n");
 	scanf("%d%d%d", &today_d, &today_m, &today_y);
 	scanf("%d%d%d", &birth_d, &birth_m, &birth_y);
@@ -270,5 +274,4 @@ int main()
 		printf("Not leap year");
 	}
 	printf("Programm was created by Vladimir Chigin"); // https://vk.com/just_like248
-	printf("priver mir");
 }
